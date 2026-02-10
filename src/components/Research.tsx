@@ -52,9 +52,9 @@ export default function Research() {
                 ))}
               </div>
 
-              <a href="#" className="inline-flex items-center gap-1 text-xs text-accent hover:underline">
+              <button className="inline-flex items-center gap-1 text-xs text-accent hover:underline">
                 View Publication <ExternalLink size={12} />
-              </a>
+              </button>
             </article>
           ))}
         </div>

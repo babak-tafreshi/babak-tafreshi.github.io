@@ -3,28 +3,36 @@ import { ArrowRight } from "lucide-react";
 
 export const projectsData = [
   {
-    slug: "aerospace-network-security",
-    title: "Aerospace Network Security",
-    subtitle: "Undergraduate Thesis",
-    brief: "Cybersecurity framework for safety-critical aerospace communication systems with post-quantum cryptographic considerations.",
-    problem: "Modern aerospace systems rely on networked communication for mission-critical operations, yet remain vulnerable to evolving cyber threats including quantum computing attacks on classical encryption.",
-    approach: "Developed a comprehensive security architecture for aerospace communication networks, analyzing attack vectors specific to safety-critical systems and proposing layered defense mechanisms including post-quantum cryptographic protocols.",
-    architecture: "Multi-layered security framework incorporating network segmentation, intrusion detection systems tailored for aerospace protocols, and post-quantum key exchange mechanisms for long-duration mission security.",
-    tools: ["Python", "Network Security Tools", "Cryptographic Libraries", "MATLAB", "Wireshark"],
-    results: "Identified critical vulnerabilities in current aerospace communication protocols and proposed a defense-in-depth architecture validated through simulation. Demonstrated feasibility of post-quantum cryptographic integration with minimal latency overhead.",
-    lessons: "Safety-critical systems require fundamentally different security approaches than commercial IT systems. The intersection of real-time constraints and security requirements demands careful co-design of communication and security architectures.",
-  },
+   slug: "autonomous-aerospace-network-reliability",
+title: "Reliability and Security of Autonomous Aerospace Networks",
+subtitle: "Undergraduate Thesis",
+brief: "System-level study of communication and navigation reliability in autonomous aerospace systems operating under adversarial and degraded conditions.",
+problem: "Autonomous aerospace systems increasingly rely on networked communication and navigation for decision-making and control. These systems must operate safely despite adversarial threats, degraded sensing, and stringent real-time constraints, making traditional IT-focused security approaches insufficient for mission-critical autonomy.",
+approach: "Developed a system-level reliability and security framework for autonomous aerospace networks, focusing on how communication and navigation integrity affect autonomous decision-making. Analyzed threat models such as GPS spoofing and communication attacks, and evaluated mitigation strategies including data-driven anomaly detection and post-quantum cryptographic concepts within simulation-based mission environments.",
+architecture: "Layered autonomy-aware architecture integrating resilient communication links, navigation integrity monitoring, anomaly detection at the system level, and cryptographic mechanisms designed for safety-critical and long-duration aerospace missions.",
+tools: ["Python", "MATLAB", "Simulation Frameworks", "Network Analysis Tools", "Telemetry and Sensor Data"],
+results: "Identified key failure modes affecting autonomous system reliability under adversarial and degraded conditions. Demonstrated how simulation-driven evaluation can be used to assess navigation integrity, communication resilience, and the feasibility of emerging security mechanisms without violating real-time operational constraints.",
+lessons: "Reliability, security, and autonomy are tightly coupled in safety-critical aerospace systems. Effective system design requires co-designing autonomy, communication, and security architectures rather than treating them seperately.",
+},
   {
     slug: "helicopter-control",
-    title: "3-DOF Helicopter Modeling and Control",
-    subtitle: "Control Systems Project",
-    brief: "Mathematical modeling and controller design for a 3-DOF helicopter system with stability analysis and simulation validation.",
-    problem: "Design and implement a control system for a 3-DOF helicopter platform that achieves stable flight dynamics across multiple operating conditions.",
-    approach: "Derived equations of motion using Lagrangian mechanics, linearized the system about equilibrium points, and designed PID and state-space controllers with stability analysis using root locus and Bode plot techniques.",
-    architecture: "MATLAB/Simulink model incorporating nonlinear dynamics, linearized state-space representation, and multiple controller architectures for comparative performance analysis.",
-    tools: ["MATLAB", "Simulink", "Control System Toolbox", "LaTeX"],
-    results: "Achieved stable tracking performance across pitch, yaw, and travel axes. Comparative analysis showed state-space controller outperforming PID in disturbance rejection and cross-coupling mitigation.",
-    lessons: "Multi-DOF systems require careful consideration of coupling effects between axes. Linearization assumptions must be validated against nonlinear simulation to ensure controller robustness.",
+title: "3-DOF Quanser Helicopter Modeling and Control",
+subtitle: "Avionics Project",
+
+brief: "First-principles modeling, linearization, and feedback controller design for a laboratory-scale 3-DOF helicopter, with stability analysis and time-domain validation in simulation.",
+
+problem: "Develop an accurate dynamic model of a 3-DOF helicopter and design feedback controllers that achieve stable regulation and trajectory tracking while accounting for axis coupling and actuator dynamics.",
+
+approach: "Derived nonlinear equations of motion from first principles and linearized the system about operating points. Identified and modeled individual plant dynamics for travel, pitch, and elevation, then designed and tuned PID controllers. Stability and performance were evaluated using root locus, frequency-domain analysis, and time-domain simulations."
+,
+architecture: "Modular MATLAB/Simulink architecture consisting of nonlinear plant models, linearized transfer functions, axis-specific controllers, and closed-loop simulation blocks for step and sinusoidal reference tracking."
+,
+tools: ["MATLAB", "Simulink", "Control System Toolbox"]
+,
+results: "Achieved stable closed-loop response for travel and pitch dynamics with acceptable settling time and overshoot. Simulation results demonstrated the impact of controller bandwidth, derivative filtering, and axis coupling on performance."
+,
+lessons: "Accurate linearization and plant separation are critical for multi-DOF systems. Controller tuning must balance robustness, noise sensitivity, and coupling effects, particularly when using high-gain or derivative-dominant designs."
+,
   },
   {
     slug: "flight-dynamics",
@@ -41,15 +49,19 @@ export const projectsData = [
   {
     slug: "ml-aerospace",
     title: "Machine Learning for Aerospace Data Analysis",
-    subtitle: "Data Science & Aerospace Project",
-    brief: "Application of machine learning techniques to aerospace datasets for predictive analysis and pattern recognition in flight data.",
-    problem: "Extract meaningful patterns and predictive insights from large-scale aerospace datasets to support data-driven decision-making in aircraft operations and maintenance.",
-    approach: "Applied supervised and unsupervised learning algorithms to aerospace telemetry data, including feature engineering specific to flight parameters, model selection, and validation frameworks.",
-    architecture: "Python-based ML pipeline with data preprocessing, feature extraction, model training, cross-validation, and visualization modules tailored for aerospace time-series data.",
-    tools: ["Python", "scikit-learn", "TensorFlow", "Pandas", "NumPy", "Matplotlib"],
-    results: "Developed predictive models achieving high accuracy on aerospace classification tasks. Identified key flight parameters contributing to operational anomalies through feature importance analysis.",
-    lessons: "Domain expertise is essential for meaningful feature engineering in aerospace applications. Model interpretability is as important as accuracy in safety-critical contexts.",
-  },
+    subtitle: "Data-Driven Modeling and Pattern Discovery",
+    brief: "Application of machine learning methods to aerospace-relevant datasets for exploratory analysis, prediction, and anomaly identification in flight and system data.",
+    problem: "Aerospace systems generate high-dimensional, time-dependent data that is difficult to analyze using classical methods alone. The challenge is to extract meaningful patterns and predictive insights that can support monitoring, diagnostics, and decision-making."
+,approach: "Implemented supervised and unsupervised learning workflows on aerospace-style telemetry data. Performed domain-informed feature engineering, data normalization, model selection, and performance evaluation, with emphasis on understanding model behavior rather than maximizing raw accuracy."
+,
+architecture: "Python-based machine learning pipeline consisting of data preprocessing, feature extraction, model training, validation, and visualization stages, designed for structured and time-series aerospace data."
+,
+tools: ["Python", "scikit-learn", "TensorFlow", "Pandas", "NumPy", "Matplotlib"]
+,
+results: "Trained predictive and clustering models capable of capturing trends and deviations in aerospace datasets. Feature analysis highlighted the influence of key flight and system parameters on model predictions."
+,
+lessons: "Effective machine learning in aerospace requires strong domain knowledge to guide feature design and data interpretation. In safety-critical contexts, model transparency and validation are as important as predictive performance."
+},
   {
     slug: "landing-gear",
     title: "Ultra-Light Aircraft Landing Gear Design",

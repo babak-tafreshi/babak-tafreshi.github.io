@@ -1,4 +1,4 @@
-import { ArrowDown, FileText, Mail, BookOpen, FolderOpen, User } from "lucide-react";
+import { ArrowDown, FileText, Mail, BookOpen, FolderOpen } from "lucide-react";
 
 export default function Hero() {
   const scrollTo = (id: string) => {
@@ -15,16 +15,15 @@ export default function Hero() {
               AEROSPACE ENGINEERING RESEARCHER
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-4">
-              Babak Nassir Tafreshi
+              Babak N. Tafreshi
             </h1>
             <p className="mono text-xs sm:text-sm text-accent tracking-wide mb-8">
-              Aerospace Engineering · Autonomous Systems · Robotics · Mission Control & Simulation
+              Aerospace Autonomous System · Avionics Security · Robotics 
             </p>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mb-10">
-              Aerospace engineering undergraduate and research assistant working on autonomous systems,
-              robotics integration, mission control environments, and cybersecurity of safety-critical
-              aerospace systems. Research interests include autonomy, perception-driven control,
-              aerospace network security, and simulation-based system design.
+              Aerospace engineering student and research intern focused on aerospace systems and avionics,
+               with an emphasis on autonomy and the reliability of safety-critical flight and space operations.
+            
             </p>
 
             <div className="flex flex-wrap gap-3 mb-16">
@@ -40,12 +39,7 @@ export default function Hero() {
               >
                 <BookOpen size={16} /> Publications
               </button>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-sm hover:bg-muted transition-colors"
-              >
-                <FileText size={16} /> Resume
-              </a>
+              {/* Resume button removed */}
               <button
                 onClick={() => scrollTo("#contact")}
                 className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-sm hover:bg-muted transition-colors"
@@ -57,9 +51,8 @@ export default function Hero() {
 
           {/* Headshot */}
           <div className="mb-8 md:mb-0 flex-shrink-0">
-            <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full border-2 border-border bg-muted flex items-center justify-center overflow-hidden">
-              {/* Replace with: <img src={headshot} alt="Babak Nassir Tafreshi" className="w-full h-full object-cover" /> */}
-              <User size={48} className="text-muted-foreground" />
+            <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full border-2 border-border overflow-hidden">
+              <img src="public/headshot.png" alt="Babak Nassir Tafreshi" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
