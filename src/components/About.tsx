@@ -7,8 +7,8 @@ export default function About() {
 
         <div className="space-y-4 text-muted-foreground leading-relaxed">
           <p>
-            I am an aerospace engineering undergraduate student at Toronto Metropolitan with research experience in autonomy, navigations, avionics,
-            Mission control,  aerospace network security,simulations and immersive environemnts.
+            I am an aerospace engineering student at Toronto Metropolitan University with research experience in autonomy, navigation, avionics,
+             aerospace network reliability and security, simulations, and immersive environments.
           
        
           </p>
