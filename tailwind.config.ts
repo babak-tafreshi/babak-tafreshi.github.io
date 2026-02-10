@@ -9,11 +9,18 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1100px",
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["'IBM Plex Sans'", "system-ui", "sans-serif"],
+        mono: ["'IBM Plex Mono'", "monospace"],
+      },
       colors: {
+        "section-alt": "hsl(var(--section-alt))",
+        highlight: "hsl(var(--highlight))",
+        "highlight-subtle": "hsl(var(--highlight-subtle))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
