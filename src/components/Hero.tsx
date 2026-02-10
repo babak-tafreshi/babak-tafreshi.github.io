@@ -49,12 +49,17 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Headshot */}
-          <div className="mb-8 md:mb-0 flex-shrink-0">
-            <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full border-2 border-border overflow-hidden">
-              <img src="public/headshot.png" alt="Babak Nassir Tafreshi" className="w-full h-full object-cover" />
-            </div>
-          </div>
+   {/* Headshot */}
+<div className="mb-8 md:mb-0 flex-shrink-0">
+  <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full border-2 border-border overflow-hidden">
+    <img
+      src="/headshot.png"
+      alt="Babak Nassir Tafreshi"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
+
         </div>
 
         <button
