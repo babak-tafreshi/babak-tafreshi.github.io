@@ -4,6 +4,8 @@ const publications = [
   {
     title: "Immersive Control Centre for Space Mission Management and Collaboration",
     venue: "SpaceOps 2025",
+    date: "2025",
+    url: "https://star.spaceops.org/2025/paper_lists.php",
     abstract:
       "This paper presents the design and implementation of an immersive control centre architecture for space mission management, enabling multi-user collaboration through mixed-reality environments integrated with real-time telemetry and digital twin systems.",
     contribution:
@@ -13,6 +15,8 @@ const publications = [
   {
     title: "Advanced Immersive Mission Control Center for Space Applications",
     venue: "TechRxiv 2025",
+    date: "2025",
+    url: "https://www.techrxiv.org/users/937492/articles/1366321-advanced-immersive-mission-control-center-for-space-applications",
     abstract:
       "An advanced mission control center framework leveraging immersive technologies for enhanced situational awareness and decision-making in space operations, featuring human-in-the-loop simulation and real-time data visualization.",
     contribution:
@@ -31,7 +35,10 @@ export default function Research() {
         <div className="space-y-8">
           {publications.map((pub, i) => (
             <article key={i} className="highlight-border pl-5 py-1">
-              <h3 className="text-lg font-semibold text-foreground mb-1">{pub.title}</h3>
+              <div className="flex items-center justify-between mb-1">
+                <h3 className="text-lg font-semibold text-foreground">{pub.title}</h3>
+                <span className="text-xs text-muted-foreground">{pub.date}</span>
+              </div>
               <p className="mono text-xs text-accent mb-3">{pub.venue}</p>
 
               <div className="mb-3">
@@ -52,9 +59,9 @@ export default function Research() {
                 ))}
               </div>
 
-              <button className="inline-flex items-center gap-1 text-xs text-accent hover:underline">
+              <a href={pub.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-accent hover:underline">
                 View Publication <ExternalLink size={12} />
-              </button>
+              </a>
             </article>
           ))}
         </div>

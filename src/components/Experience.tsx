@@ -1,14 +1,17 @@
 const experiences = [
   {
     lab: "Mixed-Reality Immersive Motion Simulation (MIMS) Lab",
-    role: "Research Assistant",
+    url: "https://people.ryerson.ca/j3chung/",
+    description: "Advanced immersive technologies and mission control systems for space and aerospace applications",
+    role: "Research Intern",
+    date: "2024 - Present",
     highlights: [
       "Developed multi-user immersive mission control system for space operations",
-      "Designed telemetry pipelines and NASA Open MCT integration",
-      "Developed digital twin environments for aircraft simulation",
+      "Designed telemetry pipelines and simulation for mission control systems",
+      "Contributed to development of interactive digital twin environments for aircraft simulation",
       "Developed human-in-the-loop simulation frameworks",
-      "Researched on reliability and security of autonomous aerospace systems",
-      "Researched on aerospace system vulnerability architecture and mitigation approaches under adversarial conditions",
+      "Researched on reliability and security of aerospace systems",
+      "Researched on aerospace system vulnerability and mitigation approaches under adversarial conditions",
       "Analysed GPS-denied and adversarial operating condition for AAM systems",
       "Researched on data-driven detection methods for navigation signal spoofing and integrity attacks",
       "Researched post-quantum communication concepts for safety-critical systems",
@@ -17,7 +20,10 @@ const experiences = [
   },
   {
     lab: "Autonomous Vehicles Laboratory (AVL)",
-    role: "Research Assistant",
+    url: "https://www.torontomu.ca/autonomous-vehicles-lab/",
+    description: "Robotics research focused on autonomous legged and mobile manipulation systems",
+    role: "Research Intern",
+    date: "2025 - 2026",
     highlights: [
       "Autonomous legged-manipulator robotic systems combining quadruped locomotion and arm manipulation",
       "ROS2-based system architecture design for distributed autonomous control",
@@ -40,7 +46,12 @@ export default function Experience() {
         <div className="space-y-10">
           {experiences.map((exp, i) => (
             <div key={i}>
-              <h3 className="text-lg font-semibold text-foreground">{exp.lab}</h3>
+              <div className="flex items-center justify-between mb-1">
+                <a href={exp.url} target="_blank" rel="noopener noreferrer" title={exp.description} className="text-lg font-semibold text-accent hover:underline">
+                  {exp.lab}
+                </a>
+                <span className="text-xs text-muted-foreground">{exp.date}</span>
+              </div>
               <p className="mono text-xs text-accent mb-4">{exp.role}</p>
 
               <ul className="space-y-1.5 mb-4">

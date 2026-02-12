@@ -7,7 +7,7 @@ export default function About() {
 
         <div className="space-y-4 text-muted-foreground leading-relaxed">
           <p>
-            I am an aerospace engineering student at Toronto Metropolitan University with research experience in autonomy, navigation, avionics,
+            I am an aerospace engineering student at Toronto Metropolitan University with research experience in autonomy, control system, avionics,
              aerospace network reliability and security, simulations, and immersive environments.
           
        
@@ -18,9 +18,9 @@ export default function About() {
              and digital-twin environments for aerospace systems. My work involves integrating real-time 
              telemetry and human-in-the-loop simulation to study the operation and decision-making processes
               associated with complex, safety-critical aerospace platforms. Building on this simulation framework, 
-              I have begun researching the reliability of autonomous aerospace systems under adversarial and degraded
+              I have begun researching the reliability of aerospace and autonomous systems under adversarial and degraded
                operating conditions, where traditional assumptions about signal integrity no longer hold. This includes 
-               studying threats such as GPS spoofing in UAV and advanced air mobility systems, as well as exploring 
+               studying threats such as GPS spoofing in advanced air mobility systems, as well as exploring 
                detection and mitigation approaches using data-driven methods and emerging security architectures such 
                as post-quantum cryptography.
           </p>
@@ -30,8 +30,7 @@ export default function About() {
             architectures, perception-driven control, and visual servoing pipelines.
           </p>
           <p>
-           My research interests focus on autonomy, control, and reliability in safety-critical 
-           aerospace systems. I aim to pursue graduate research in autonomy, robotics, and 
+          I aim to pursue graduate research in controls, autonomy, robotics, and 
            aerospace systems, contributing to the development of robust and trustworthy flight
             and space technologies.
           </p>

@@ -18,12 +18,13 @@ export default function Hero() {
               Babak N. Tafreshi
             </h1>
             <p className="mono text-xs sm:text-sm text-accent tracking-wide mb-8">
-              Aerospace Autonomous System · Avionics Security · Robotics 
+              Autonomous Systems · Robotics · Avionics Security
             </p>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mb-10">
-              Aerospace engineering student and research intern focused on aerospace systems and avionics,
-               with an emphasis on autonomy and the reliability of safety-critical flight and space operations.
-            
+              Aerospace engineering student and research intern focused on autonomous aerospace 
+              systems, avionics, and robotics, with emphasis on control, 
+              system reliability, and the development of secure and safety-critical flight
+               and space systems.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-16">
@@ -50,8 +51,8 @@ export default function Hero() {
           </div>
 
    {/* Headshot */}
-<div className="mb-8 md:mb-0 flex-shrink-0">
-  <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full border-2 border-border overflow-hidden">
+<div className="mb-8 md:mb-0 flex-shrink-0 flex justify-center md:justify-start">
+  <div className="w-63 h-64 sm:w-64 sm:h-64 rounded-full border-4 border-border overflow-hidden">
     <img
       src="/headshot.png"
       alt="Babak Nassir Tafreshi"

@@ -2,22 +2,23 @@ const entries = [
   {
     title: "MARS Rocketry Team",
     role: "Team Captain & Avionics Engineer",
-    desc: "Led multidisciplinary rocketry team in system integration, avionics design, and launch operations coordination.",
+    desc: "Former Team Captain and Avionics Engineer, leading and contributing to the design, integration, and testing of launch vehicle avionics systems.",
+
   },
   {
     title: "AIAA TMU Student Branch",
     role: "VP Communications",
-    desc: "Managed outreach and technical communications for the student chapter, organizing seminars and industry networking events.",
+    desc: "Vice President of Communications, supporting technical outreach, industry engagement, and coordination of student research, professional development events, and aerospace-focused initiatives in alignment with AIAA objectives.",
   },
-  {
-    title: "Velocity Autonomous Systems Team",
-    role: "Team Member",
-    desc: "Contributed to autonomous vehicle system development, focusing on perception and control subsystems.",
-  },
+{
+  title: "MetRocketry",
+  role: "Avionics Engineer",
+  desc: "Contributed to Battery Management System Design and experimental testing activities, with exposure to propulsion concepts, vehicle integration, and hands-on engineering workflows in a collaborative team environment.",
+},
   {
     title: "Webicore Digital Agency",
     role: "Founder",
-    desc: "Founded and managed a digital agency, leading project delivery, client relations, and technical architecture decisions.",
+    desc: "Founded and managed a digital agency, leading project delivery, client relations, and technical architecture decisions for website and online platform developments.",
   },
 ];
 

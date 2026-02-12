@@ -15,6 +15,10 @@ const skillGroups = [
     category: "Software & Systems",
     skills: ["Telemetry Pipelines", "Digital Twins", "Mission Control Interfaces", "Git", "Linux"],
   },
+  {
+    category: "Soft Skills",
+    skills: ["Team Leadership", "Project Management", "Technical Communication", "Problem Solving", "Time-Management"],
+  },
 ];
 
 export default function Skills() {
