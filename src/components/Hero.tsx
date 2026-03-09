@@ -54,7 +54,7 @@ export default function Hero() {
 <div className="mb-8 md:mb-0 flex-shrink-0 flex justify-center md:justify-start">
   <div className="w-63 h-64 sm:w-64 sm:h-64 rounded-full border-4 border-border overflow-hidden">
     <img
-      src="/headshot.png"
+      src="/headshot1.png"
       alt="Babak Nassir Tafreshi"
       className="w-full h-full object-cover"
     />
