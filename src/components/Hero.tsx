@@ -196,8 +196,8 @@ export default function Hero() {
       });
 
       // sweep cone
-      const grad = ctx.createConicalGradient
-        ? (ctx as any).createConicalGradient(0, 0, sweep)
+      const grad = (ctx as CanvasRenderingContext2D & { createConicalGradient?: (x: number, y: number, angle: number) => CanvasGradient }).createConicalGradient
+        ? (ctx as CanvasRenderingContext2D & { createConicalGradient?: (x: number, y: number, angle: number) => CanvasGradient }).createConicalGradient(0, 0, sweep)
         : null;
 
       // Fallback: draw an arc wedge

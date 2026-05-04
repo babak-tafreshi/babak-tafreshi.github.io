@@ -43,6 +43,73 @@ export const projectsData = [
     lessons: "Hands-on manufacturing emphasizes that physical material tolerances and assembly techniques (epoxy curing, precision fin alignment) are exactly as critical as theoretical CAD geometry for successful atmospheric flight.",
     gallery: ["/projects/M1.png", "/projects/M2.png", "/projects/M3.png", "/projects/M4.png"],
   },
+{
+  slug: "immersive-mission-control",
+  title: "Immersive Mission Control Center for Space Applications",
+  subtitle: "Conference Paper – APISAT 2025 & SpaceOps 2025",
+  brief: "Development of an XR-enabled digital twin mission control architecture integrating real-time orbital simulation, collaborative interaction, and collision-avoidance verification for next-generation space operations.",
+
+  problem: "Traditional mission control systems rely on rigid software architectures and 2D interfaces that limit situational awareness, collaborative efficiency, and intuitive understanding of orbital dynamics. As missions grow in complexity and require distributed global coordination, conventional control rooms struggle to integrate heterogeneous data streams, simulate maneuvers collaboratively, and reduce decision latency during safety-critical events such as debris collision risks.",
+
+  approach: "Designed and implemented an immersive mission control framework that integrates XR visualization, digital twin modeling, real-time orbital simulation, and collaborative decision support. Developed a real-time orbital dynamics engine using a two-body gravity model with Δv maneuver capability and telemetry generation compatible with TLE formats. Integrated this backend with Unreal Engine to render synchronized 3D digital twins of satellites and orbital debris. Implemented collision detection using bounding-box proximity thresholds and time-based trajectory projection, enabling immersive threat identification and maneuver verification before execution.",
+
+  architecture: "Layered immersive mission control architecture consisting of: (1) real-time orbital simulation engine with Euler integration and maneuver modeling, (2) telemetry and TLE generation pipeline, (3) Unreal Engine digital twin environment, (4) collaborative synchronization layer via Veyond Connect server, and (5) XR interaction interfaces including haptic gloves, controllers, and tablet-based command panels. The system synchronizes orbital data, user commands, POV rendering, and live communication streams across distributed participants to support global collaborative operations.",
+
+  tools: [
+    "Unreal Engine (XR Development)",
+    "Python",
+    "Orekit",
+    "Open MCT",
+    "TLE Processing and Generation",
+    "JSON Telemetry Streaming",
+    "WebRTC Integration",
+    "XR Headsets (VR/AR)",
+  ],
+
+  results: "Demonstrated real-time immersive collision avoidance scenario in which operators identified a predicted debris threat, collaboratively designed a new orbital trajectory, simulated post-maneuver behavior within the digital twin environment, and verified safety before command transmission. The system improved spatial awareness of orbital mechanics, reduced decision latency, and enabled synchronized multi-user interaction across distributed locations. Validation showed seamless transition between simulation, collaborative planning, and maneuver execution tracking via updated TLE data.",
+
+  lessons: "Immersive XR environments significantly enhance operator cognition when managing multi-dimensional orbital scenarios. Digital twins are most powerful when tightly integrated with live telemetry and maneuver simulation rather than used purely for visualization. Collaborative mission control requires synchronization not only of data streams but of user perspective, interaction state, and communication channels. Bridging physical operations and digital simulation reduces operational risk and enables safer real-time decision-making in space missions.",
+  gallery: ["/projects/ss1.png"],
+},
+  {
+  slug: "adair-xr-hud-trajectory-operations",
+  title: "XR-Enabled HUD Architecture for Trajectory-Based Operations",
+  subtitle: "ADAIR Airspace Modernization Project",
+  brief: "Contributed to the design and system-level implementation of Extended Reality (XR) Head-Up Display architectures for airport surface navigation and 4D Trajectory-Based Operations within next-generation air traffic management frameworks.",
+
+  problem: "Next-generation airspace concepts such as Trajectory-Based Operations (TBO) and advanced surface navigation require precise time-constrained 4D trajectory management and increased aircraft-ground data exchange. Traditional cockpit workflows rely heavily on verbal ATC instructions and static navigation charts, which can limit situational awareness in congested or low-visibility conditions. A scalable cockpit-level interface architecture is required to support real-time trajectory updates, dynamic route amendments, and increased automation without introducing display clutter or cognitive overload.",
+
+  approach: "Developed an immersive XR-based flight deck simulation environment to prototype and validate advanced HUD symbology configurations for both Surface Operations (SURF) and airborne TBO scenarios. Implemented conformal navigation overlays aligned with certified HUD design standards, integrated real-time trajectory modification logic, and simulated departure sequences including dynamic route amendments. Evaluated system performance through navigation accuracy, trajectory compliance, and operational responsiveness within high-fidelity 4D flight simulations.",
+
+  architecture: "Integrated XR flight simulation stack combining Unreal Engine 5 rendering, JSBSim flight dynamics modeling, Cesium-based geospatial environments, modular HUD symbology layers, trajectory amendment engine, and real-time aircraft state synchronization. The architecture supports conformal 3D symbology projection, visibility-mode switching, dynamic route updates, and scalable deployment for future cockpit integration research within advanced ATM ecosystems.",
+
+  tools: ["Unreal Engine 5", "JSBSim", "Cesium Ion", "XR Headsets (Varjo)", "Flight Dynamics Modeling", "Trajectory Planning Algorithms", "HUD Symbology Frameworks"],
+
+  results: "Successfully implemented a scalable XR-based cockpit environment capable of simulating airport surface navigation and airborne 4D trajectory execution with dynamic route updates. Demonstrated feasibility of integrating time-constrained trajectory guidance directly into conformal HUD symbology while maintaining operational clarity. Established a modular architecture suitable for further automation integration and next-generation ATM research.",
+
+  lessons: "Next-generation airspace modernization requires cockpit interfaces that are tightly coupled with trajectory logic and real-time data exchange. HUD systems must evolve from static information displays to adaptive trajectory-aware guidance systems. XR-based simulation environments provide a powerful platform for accelerating cockpit architecture development before real-world deployment.",
+  gallery: ["/projects/ad1.jpg"],
+},
+
+{
+  slug: "avrt-global-7500-digital-twin-training",
+  title: "Immersive Digital-Twin Training Environment for Global 7500",
+  subtitle: "AVRT Industry Collaboration Project",
+  brief: "Development of an immersive digital-twin simulation environment for Bombardier Global 7500 maintenance training, supporting technician skill development and aircraft validation activities.",
+
+  problem: "Modern business aircraft such as the Global 7500 incorporate highly integrated avionics, systems architecture, and maintenance procedures that are difficult and costly to train on using physical aircraft alone. Traditional classroom instruction and limited hands-on access can restrict technician readiness, increase training costs, and reduce exposure to complex or fault-based maintenance scenarios.",
+
+  approach: "Designed and implemented immersive digital-twin simulation modules replicating Global 7500 aircraft systems and maintenance workflows within a real-time XR environment. Modeled aircraft components and maintenance tasks to allow technicians to interact with virtual systems, practice procedural operations, and simulate inspection, troubleshooting, and servicing tasks without requiring direct aircraft access. Supported aircraft testing and on-site evaluation activities to align simulation fidelity with operational maintenance requirements.",
+
+  architecture: "Integrated immersive training architecture combining high-fidelity 3D aircraft models, system-state simulation logic, interactive maintenance task modules, and XR-based visualization. The platform enabled realistic spatial interaction, guided procedural training, and modular expansion for additional aircraft subsystems. The system was designed to mirror real aircraft geometry, access panels, and maintenance sequences to ensure alignment with operational documentation and technical manuals.",
+
+  tools: ["Unreal Engine", "Digital Twin Modeling", "XR/VR Headsets", "Aircraft Systems Documentation", "3D Asset Development", "Interactive Simulation Frameworks"],
+
+  results: "Delivered immersive maintenance training modules supporting Global 7500 technician preparation in a controlled virtual environment. Enabled repeatable practice of procedures, improved spatial familiarity with aircraft systems, and supported collaboration with industry partners for evaluation and validation. Contributed to bridging the gap between digital simulation and real aircraft maintenance workflows.",
+
+  lessons: "Effective aerospace training platforms require high geometric fidelity, procedural accuracy, and system-state realism. Digital twins are most impactful when aligned directly with operational documentation and validated through industry collaboration. Immersive simulation environments can significantly enhance technician preparedness while reducing training constraints tied to physical aircraft availability.",
+  gallery: ["/projects/AV1.webp"],
+},
   {
     slug: "predictive-maintenance-spatial-ml",
     title: "Predictive Maintenance via Spatial ML (AR-Oriented)",
@@ -56,6 +123,8 @@ export const projectsData = [
     lessons: "Lightweight machine learning models can be effectively leveraged for procedural intelligence within aerospace environments, massively reducing technician cognitive load without requiring heavy computational infrastructure.",
     gallery: ["/projects/ML10.png", "/projects/ML11.png"],
   },
+
+  
   {
     slug: "pcb-inspection-yolov11",
     title: "PCB Inspection & Component Detection (YOLOv11)",
@@ -183,7 +252,7 @@ export default function Projects() {
                   {/* Thumbnail Image Header */}
                   <div className="w-full h-56 relative overflow-hidden bg-background border-b border-primary/10">
                     <div className="absolute inset-0 group-hover:scale-[1.03] transition-transform duration-700">
-                      <FallbackImage path={p.gallery[0]} />
+                      <FallbackImage path={p.gallery?.[0] ?? ""} />
                     </div>
                   </div>
 

@@ -24,6 +24,13 @@ const entries = [
     desc: "Managed strategic outreach for the student chapter, organizing key technical seminars and industry networking events.",
   },
   {
+    title: "MetRocketry (Avionics Engineer)",
+    role: "Avionics Engineer",
+    date: "2023 – 2024",
+    icon: Target,
+    desc: "Contributed to Battery Management System Design and experimental testing activities, with exposure to propulsion concepts, vehicle integration, and hands-on engineering workflows in a collaborative team environment.",
+  },
+  {
     title: "Webicore Digital Agency",
     role: "Founder",
     date: "2022 – 2024",
