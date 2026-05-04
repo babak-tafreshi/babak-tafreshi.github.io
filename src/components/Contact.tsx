@@ -8,8 +8,7 @@ export default function Contact() {
         <div className="w-12 h-0.5 bg-accent mb-8" />
 
         <p className="text-muted-foreground mb-6">
-          Open to research collaborations and graduate research opportunities in autonomy, robotics,
-          and aerospace systems.
+          Open to research collaborations and job opportunities in aviation, methods, avionics, and aerospace systems.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
@@ -20,7 +19,7 @@ export default function Contact() {
             <Mail size={16} /> babak.tafreshi@torontomu.ca
           </a>
           <a
-            href="https://github.com/babak-tafreshi"
+            href="https://www.linkedin.com/in/babak-tafreshi-638419261"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-foreground hover:text-accent transition-colors"
@@ -28,7 +27,7 @@ export default function Contact() {
             <Linkedin size={16} /> LinkedIn
           </a>
           <a
-            href="https://www.linkedin.com/in/babak-tafreshi-638419261/"
+            href="https://github.com/babak-tafreshi"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-foreground hover:text-accent transition-colors"

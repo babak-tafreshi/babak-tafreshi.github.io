@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
@@ -13,6 +13,13 @@ const navItems = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const scrollTo = (href: string) => {
     setOpen(false);
@@ -21,19 +28,21 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur border-b border-border">
-      <div className="container mx-auto flex items-center justify-between h-14 px-4">
-        <Link to="/" className="font-semibold text-sm tracking-wide text-foreground">
-          B. N. TAFRESHI
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled ? "bg-white border-b border-border shadow-sm" : "bg-transparent"
+    }`}>
+      <div className="container mx-auto flex items-center justify-between h-14 px-6">
+        <Link to="/" className="serif text-base font-semibold text-foreground tracking-tight hover:text-primary transition-colors">
+          B. N. Tafreshi
         </Link>
 
         {/* Desktop */}
-        <ul className="hidden md:flex items-center gap-6">
+        <ul className="hidden md:flex items-center gap-7">
           {navItems.map((item) => (
             <li key={item.label}>
               <button
                 onClick={() => scrollTo(item.href)}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 tracking-wide"
               >
                 {item.label}
               </button>
@@ -49,12 +58,12 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-b border-border bg-background px-4 pb-4">
+        <div className="md:hidden border-b border-border bg-white px-6 py-4 space-y-3">
           {navItems.map((item) => (
             <button
               key={item.label}
               onClick={() => scrollTo(item.href)}
-              className="block w-full text-left py-2 text-sm text-muted-foreground hover:text-foreground"
+              className="block w-full text-left text-sm text-muted-foreground hover:text-foreground py-1"
             >
               {item.label}
             </button>
