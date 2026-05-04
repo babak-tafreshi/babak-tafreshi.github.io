@@ -10,13 +10,6 @@ const entries = [
     desc: "Led a multidisciplinary engineering team in system integration, rapid avionics design, and launch operation coordination from scratch.",
   },
   {
-    title: "MetRocketry",
-    role: "Avionics Team Member",
-    date: "May 2024 – Dec 2024",
-    icon: Target,
-    desc: "Spearheaded advanced avionics testing, custom payload integration, and structural validation within extreme competition-grade limits.",
-  },
-  {
     title: "AIAA TMU Chapter",
     role: "VP Communications",
     date: "2025 – 2026",
@@ -24,7 +17,7 @@ const entries = [
     desc: "Managed strategic outreach for the student chapter, organizing key technical seminars and industry networking events.",
   },
   {
-    title: "MetRocketry (Avionics Engineer)",
+    title: "MetRocketry",
     role: "Avionics Engineer",
     date: "2023 – 2024",
     icon: Target,
