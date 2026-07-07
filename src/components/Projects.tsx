@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Image as ImageIcon } from "lucide-react";
 import { motion } from "framer-motion";
+import SectionHeader from "@/components/SectionHeader";
 
 export const projectsData = [
   {
@@ -194,90 +195,76 @@ export const projectsData = [
 
 export const FallbackImage = ({ path }: { path: string }) => {
   const [error, setError] = useState(false);
-  
+
   if (error || !path) {
     return (
-      <div className="w-full h-full bg-accent/5 flex flex-col items-center justify-center border-2 border-dashed border-primary/20 p-6 text-center select-none group-hover:bg-primary/5 transition-colors">
-        <ImageIcon className="w-10 h-10 text-primary/40 mb-3 group-hover:scale-110 transition-transform" />
-        <p className="text-[11px] font-bold text-foreground mb-1 uppercase tracking-wider">Image Placeholder</p>
-        <p className="text-[10px] text-muted-foreground font-mono truncate max-w-full px-2 opacity-70">
-          Upload at: public{path}
-        </p>
+      <div className="w-full h-full bg-gradient-to-br from-highlight-subtle to-secondary flex flex-col items-center justify-center border border-dashed border-accent/20 p-4 text-center select-none">
+        <ImageIcon className="w-8 h-8 text-accent/20 mb-2" />
+        <p className="text-[10px] text-muted-foreground mono">No image</p>
       </div>
     );
   }
-  
+
   return (
-    <img 
-      src={path} 
-      alt="Project Gallery" 
-      className="w-full h-full object-cover" 
-      onError={() => setError(true)} 
+    <img
+      src={path}
+      alt="Project"
+      className="w-full h-full object-cover"
+      onError={() => setError(true)}
     />
   );
 };
 
 export default function Projects() {
   return (
-    <section id="projects" className="section-padding bg-background relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-1/2 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] -z-10 pointer-events-none" />
-
-      <div className="container mx-auto max-w-7xl relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+    <section id="projects" className="section-padding section-alt">
+      <div className="container mx-auto max-w-5xl">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="mb-16 text-center md:text-left"
+          viewport={{ once: true, margin: "-80px" }}
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight">Engineering Projects</h2>
-          <div className="w-24 h-1.5 bg-accent rounded-full mx-auto md:mx-0" />
+          <SectionHeader title="Engineering Projects" subtitle="Selected technical work and research" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="space-y-3">
           {projectsData.map((p, idx) => (
-            <motion.div
+            <motion.article
               key={p.slug}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.1 * (idx % 3) }}
-              className="h-full"
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ delay: 0.05 * (idx % 5) }}
+              className="academic-entry card-gradient group hover:glow-accent-hover"
             >
-              <Link
-                to={`/project/${p.slug}`}
-                className="block h-full group"
-              >
-                <div className="h-full flex flex-col glass rounded-[2rem] border border-primary/10 overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_40px_hsl(var(--primary)/0.15)] hover:border-primary/20 transition-all duration-500">
-                  {/* Thumbnail Image Header */}
-                  <div className="w-full h-56 relative overflow-hidden bg-background border-b border-primary/10">
-                    <div className="absolute inset-0 group-hover:scale-[1.03] transition-transform duration-700">
-                      <FallbackImage path={p.gallery?.[0] ?? ""} />
-                    </div>
-                  </div>
+              <Link to={`/project/${p.slug}`} className="block">
+                <div className="grid md:grid-cols-[220px_1fr] gap-6 items-start">
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.2 }}
+                    className="w-full h-40 md:h-32 overflow-hidden border-2 border-accent/20 bg-gradient-to-br from-highlight-subtle to-white flex-shrink-0 rounded-lg shadow-md group-hover:shadow-lg transition-shadow"
+                  >
+                    <FallbackImage path={p.gallery?.[0] ?? ""} />
+                  </motion.div>
 
-                  {/* Content Block */}
-                  <div className="p-8 flex-1 flex flex-col">
-                    <p className="mono text-xs text-accent mb-3 font-bold tracking-widest uppercase">{p.subtitle}</p>
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors leading-tight mb-4">
+                  <div className="min-w-0">
+                    <p className="label-caps mb-2 text-accent">{p.subtitle}</p>
+                    <h3 className="text-base md:text-lg font-bold text-foreground group-hover:text-accent transition-colors leading-snug mb-2">
                       {p.title}
                     </h3>
-                    <p className="text-[15px] text-muted-foreground leading-relaxed flex-1">
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-3 line-clamp-2 md:line-clamp-none">
                       {p.brief}
                     </p>
-                    
-                    <div className="mt-8 flex items-center justify-between border-t border-border/50 pt-5">
-                      <span className="text-sm font-bold text-foreground flex items-center gap-2 group-hover:text-primary transition-colors">
-                        View Documentation
-                      </span>
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                        <ArrowRight size={14} className="text-primary group-hover:text-primary-foreground group-hover:translate-x-0.5 transition-all" />
-                      </div>
-                    </div>
+                    <motion.span
+                      className="inline-flex items-center gap-1.5 text-sm text-accent font-semibold group-hover:gap-2.5 transition-all"
+                      whileHover={{ x: 4 }}
+                    >
+                      Read documentation <ArrowRight size={14} />
+                    </motion.span>
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

@@ -1,11 +1,10 @@
 import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Research from "@/components/Research";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
-import Leadership from "@/components/Leadership";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -13,17 +12,20 @@ const Index = () => {
   return (
     <>
       <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Research />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Leadership />
-        <Contact />
-      </main>
-      <Footer />
+      <div className="flex min-h-screen">
+        <Sidebar />
+        <div className="flex-1 min-w-0">
+          <main>
+            <Hero />
+            <About />
+            <Research />
+            <Experience />
+            <Projects />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </div>
     </>
   );
 };
